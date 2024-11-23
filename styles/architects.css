@@ -111,13 +111,65 @@ main>section{
 #quick-list{
     font-weight: 500;
 }
+
+/* Some facts related styles */
+.fact-description{
+    max-width: 540px;
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;  /* for grid we use justify items center */
+}
+.fact-card{
+    border: 1px solid rgba(255, 144, 14, 1);
+    height: 240px;
+    width: 240px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;  /* Because we used header tag , and each header tag has some margin by defaul, so to overrite that default margin */
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+/* Sponsor Related Styles */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
 /* Responsive Media Query */
 @media screen and (max-width: 576px){
     .navbar, .nav-links, .teams{
         flex-direction: column;
     }
-    .team-img-container{
+    .team-img-container, .facts-container, .sponsor-companies{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .facts-container{
+        gap: 24px;
+    }
+    .sponsor-companies{
+        gap:50px;
     }
     /* .our-features{
         margin-left: 20px;
